@@ -12,14 +12,14 @@ Collaborative Filtering is a personalized recommendation approach that provides 
 # Frontend
 In frontent we have 2 folders here consisting of Templates folder where html files are present and Static folder where css_files and jss_files are present for the website front.
 # Templates
-a) home.html - It is the introduction page of the Website. Provide buttons for SignUp and Login
-b) index.html - Contains all the pages data 
-c) SignUp.html - It is used to create a account for the new user with neccesary validations required
-d) login.html - It is used by the registered user to use in the website.
-e) movie_details.html - Contains all details about all the movies in the dataset as movie cards and can be filtered using the Tag, Ratings, Year of the movie data.
-f) recommendions.html - Gives to the Movie recommendations to the user by the user prefernce of selecting Multiple Genre.
-g) top_rated_movies.html - Gives Top 10 recommended movies from the whole Dataset randomly.
-h) user_profile.html - Ask the User to enter the his/her prefernces and saves them.
+1. home.html - It is the introduction page of the Website. Provide buttons for SignUp and Login.
+2. index.html - Contains all the pages data.
+3. SignUp.html - It is used to create a account for the new user with neccesary validations required.
+4. login.html - It is used by the registered user to use in the website.
+5. movie_details.html - Contains all details about all the movies in the dataset as movie cards and can be filtered using the Tag, Ratings, Year of the movie data.
+6. recommendions.html - Gives to the Movie recommendations to the user by the user prefernce of selecting Multiple Genre.
+7. top_rated_movies.html - Gives Top 10 recommended movies from the whole Dataset randomly.
+8. user_profile.html - Ask the User to enter the his/her prefernces and saves them.
 These web pages also contains the required css and js files in the repositary.
 
 # Proposed-Methodology-LightGCN
@@ -32,21 +32,21 @@ Process:
 5. Website Development
 6. Integration
 # Layers in LightGCN:
-**a. Input Layer (Graph Representation):**
+**a) Input Layer (Graph Representation):**
 1. Users and items are represented as nodes in the graph & Interactions between users and items are represented as edges in the graph.
 2. Each edge carries information about the interaction type or strength (e.g., ratings, genre, etc).
 3. The graph can be directed or undirected depending on the nature of the interactions.
 
-**b. Embedded Layer:**
+**b) Embedded Layer:**
 1. Node embeddings are initialized for both users and items.
 2. Each node (user or item) is associated with an initial embedding vector, These embeddings serve as the starting point for information propagation.
    
-**c. Propagation Layer:**
+**c) Propagation Layer:**
 1. Graph convolutional layers propagate information across the graph.
 2. Information from neighboring nodes is aggregated to update node embeddings.
 3. LightGCN performs this aggregation without feature transformations or nonlinear activations, making the process efficient,
 
-**d. Prediction Layer:**
+**d) Prediction Layer:**
 1. The final layer aggregates embeddings from the last convolutional layer.
 2. Predictions for user-item interactions are generated based on these aggregated embeddings.
 3. Common methods include computing the dot product or cosine similarity between user and item embeddings.
