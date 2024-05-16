@@ -11,6 +11,16 @@ Collaborative Filtering is a personalized recommendation approach that provides 
 
 # Frontend
 In frontent we have 2 folders here consisting of Templates folder where html files are present and Static folder where css_files and jss_files are present for the website front.
+# Templates
+a) home.html - It is the introduction page of the Website. Provide buttons for SignUp and Login
+b) index.html - Contains all the pages data 
+c) SignUp.html - It is used to create a account for the new user with neccesary validations required
+d) login.html - It is used by the registered user to use in the website.
+e) movie_details.html - Contains all details about all the movies in the dataset as movie cards and can be filtered using the Tag, Ratings, Year of the movie data.
+f) recommendions.html - Gives to the Movie recommendations to the user by the user prefernce of selecting Multiple Genre.
+g) top_rated_movies.html - Gives Top 10 recommended movies from the whole Dataset randomly.
+h) user_profile.html - Ask the User to enter the his/her prefernces and saves them.
+These web pages also contains the required css and js files in the repositary.
 
 # Proposed-Methodology-LightGCN
 The proposed method in this project is LightGCN, or Light Graph Convolutional Network, is an innovative recommendation algorithm designed to provide accurate and personalized recommendations in various domains, particularly in collaborative filtering tasks. It leverages graph neural networks (GNNs) to analyze and model user-item interaction data, capturing latent relationships between users and items within a recommendation graph.
@@ -22,21 +32,21 @@ Process:
 5. Website Development
 6. Integration
 # Layers in LightGCN:
-a. Input Layer (Graph Representation):
+**a. Input Layer (Graph Representation):**
 1. Users and items are represented as nodes in the graph & Interactions between users and items are represented as edges in the graph.
 2. Each edge carries information about the interaction type or strength (e.g., ratings, genre, etc).
 3. The graph can be directed or undirected depending on the nature of the interactions.
 
-b. Embedded Layer:
+**b. Embedded Layer:**
 1. Node embeddings are initialized for both users and items.
 2. Each node (user or item) is associated with an initial embedding vector, These embeddings serve as the starting point for information propagation.
    
-c. Propagation Layer:
+**c. Propagation Layer:**
 1. Graph convolutional layers propagate information across the graph.
 2. Information from neighboring nodes is aggregated to update node embeddings.
 3. LightGCN performs this aggregation without feature transformations or nonlinear activations, making the process efficient,
 
-d. Prediction Layer:
+**d. Prediction Layer:**
 1. The final layer aggregates embeddings from the last convolutional layer.
 2. Predictions for user-item interactions are generated based on these aggregated embeddings.
 3. Common methods include computing the dot product or cosine similarity between user and item embeddings.
@@ -49,24 +59,24 @@ c) Neural Graph Collaborative Filtering Recommendation System (NGCF)
 d) Matrix Factorisation (MF)
 e) Singular Vector Decomposition (SVD)
 
-a) Drawbacks Of Hybrid Recommendation Systems:
+**a) Drawbacks Of Hybrid Recommendation Systems:**
 
 1. Simplicity and Efficiency: LightGCN is to implement and computationally more officient compared to Hybrid Recommendations, which often involve combining multiple models or techniques
 2. Cold-start Problem Handling: LightGCN is adept at handling the cold-start problem by relying solely on user-item interaction data, making it more suitable for scenarios where there's limited or no historical data available for new items or users.
 
-b) Drawbacks Of Cosine Similarity Based Recommendation Systems:
+**b) Drawbacks Of Cosine Similarity Based Recommendation Systems:**
 1. Implicit Feedback Handling: It's great at understanding scenarios where users don't explicitly rate items. This means it can pick up on subtle relationships between users and items better than methods like cosine similarity.
 2. Embedding Learning: LightGCN learns compact, rich representations of users and items, Unlike cosine similarity, which just looks at basic features, LightGCN digs deeper, capturing complex relationships in the data. This leads to more accurate recommendations
 
-c) Drawbacks Of Neural Graph Collaborative Filtering:
+**c) Drawbacks Of Neural Graph Collaborative Filtering:**
 1. Complexity: Neural Graph Collaborative Filtering (NGCF) can be more complex to implement and fine-tune compared to LightGCN, which may require more expertise and computational resources.
 2. Interpretability: NGCF's intricate neural network architecture may lack interpretability compared to LightGCN. making it harder to understand how are generated.
 
-d) Drawbacks Of Matrix Factorisation:
+**d) Drawbacks Of Matrix Factorisation:**
 1. Scalability: LightGCN handles large-scale datasets more efficiently. It can process massive amounts of data quickly, making it suitable for real-world recommendation systems with millions of users and items,
 2. Cold-start Problem; LightGCN tackles the issue of making recommendations for new users or items with limited data, It can use additional information, like user or item characteristics, to provide meaningful recommendations even when interaction data is sparse.
 
-e) Drawbacks Of Singular Vector Decomposition:
+**e) Drawbacks Of Singular Vector Decomposition:**
 1. Cold Start Problem: SVD struggles with new users or items without enough interaction data, limiting its effectiveness in recommending to them. LightGCN handles this better by not relying. solely on historical interactions,
 2. Scalability: SVD's computational demands grow quickly with dataset size, making it inefficient for large-scale recommendation tasks. LightGCN is more scalable and efficient due to its simpler operations and lower computational requirements
 
@@ -78,11 +88,11 @@ DATASET LINK: https://files.grouplens.org/datasets/movielens/ml-latest-small.zip
 
 The data are contained in the files are: "'links.csv', 'movies.csv', 'ratings.csv' and 'tags.csv" ".
 Certainly! Here's a brief summary of each file in the MovieLens dataset:
-1. movies.csv:
+1. **movies.csv:**
    - Contains movie information.
    - Each line represents one movie and includes movie ID, title, and genres.
    - Genres are listed in a pipe-separated format, and titles include the year of release in parentheses.  
-2. tags.csv:
+2. **tags.csv:**
    - Contains user-generated tags for movies.
    - Each line represents one tag applied to one movie by one user.
    - Tags are typically single words or short phrases describing the movie.
